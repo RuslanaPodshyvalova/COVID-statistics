@@ -1,21 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { uuid } from 'uuidv4'
+import { v4 as uuidv4 } from 'uuid';
 import { Country } from '../components/Country';
  
-export const CountryList = ({ countries }) => (
+export const CountryList = ({ countries, onSelectCountry }) => (
   <ul>
     {countries.map( country => (
-      <li key={uuid()}>
+     <>
+      <li
+        key={uuidv4()}
+        onClick={() => onSelectCountry(country)}
+      >
         <Country {...country} />
-      </li>
+      </li></>
     ))}
   </ul>
-
 );
 
 CountryList.propTypes = {
   countries: PropTypes.array,
+  selectCountry: PropTypes.func,
 }
 
 CountryList.defaultProps = {
