@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { v4 as uuidv4 } from 'uuid';
-import { Country } from '../components/Country';
+import { Country } from '../Country';
  
 export const CountryList = ({ countries, onSelectCountry }) => (
   <ul>

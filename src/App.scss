@@ -1,4 +1,10 @@
 .content {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+}
+
+.details {
+  position: absolute;
+  right: 0px;
 }
